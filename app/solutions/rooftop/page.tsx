@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { ArchitectureCard } from '@/components/ArchitectureCard';
 
 export default function RooftopSolutionPage() {
   return (
@@ -152,7 +153,7 @@ export default function RooftopSolutionPage() {
         </div>
       </section>
 
-      <section className="py-32 md:py-40 bg-neutral-950">
+      <section className="py-32 md:py-40 bg-black">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-xs tracking-[0.25em] text-neutral-500 mb-6 uppercase font-light">
             ARCHITECTURE
@@ -162,60 +163,37 @@ export default function RooftopSolutionPage() {
             Why this rooftop system works
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
-            <div>
-              <h3 className="text-2xl text-white font-light mb-6">Performance optimization</h3>
-              <ul className="space-y-4 text-neutral-400 font-light">
-                <li className="flex items-start">
-                  <span className="mr-3 text-neutral-600">—</span>
-                  <span>Module-level energy optimization</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 text-neutral-600">—</span>
-                  <span>Reduced mismatch losses across the array</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 text-neutral-600">—</span>
-                  <span>Improved output consistency under partial shading and uneven conditions</span>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-2xl text-white font-light mb-6">Lightweight & scalable</h3>
-              <ul className="space-y-4 text-neutral-400 font-light">
-                <li className="flex items-start">
-                  <span className="mr-3 text-neutral-600">—</span>
-                  <span>Distributed system layout with no single point of failure</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 text-neutral-600">—</span>
-                  <span>Modular design allows flexible system sizing</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 text-neutral-600">—</span>
-                  <span>Easy system expansion as energy demand grows</span>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-2xl text-white font-light mb-6">Long-term stability</h3>
-              <ul className="space-y-4 text-neutral-400 font-light">
-                <li className="flex items-start">
-                  <span className="mr-3 text-neutral-600">—</span>
-                  <span>Designed for continuous outdoor rooftop operation</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 text-neutral-600">—</span>
-                  <span>Stable performance across seasons and temperature variations</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 text-neutral-600">—</span>
-                  <span>Architecture optimized for long service life</span>
-                </li>
-              </ul>
-            </div>
+          <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
+            <ArchitectureCard
+              title="Performance optimization"
+              items={[
+                'Module-level energy optimization',
+                'Reduced mismatch losses across the array',
+                'Improved output consistency under partial shading and uneven conditions'
+              ]}
+              imageSrc="/8.png"
+              index={0}
+            />
+            <ArchitectureCard
+              title="Lightweight & scalable"
+              items={[
+                'Distributed system layout with no single point of failure',
+                'Modular design allows flexible system sizing',
+                'Easy system expansion as energy demand grows'
+              ]}
+              imageSrc="/9.png"
+              index={1}
+            />
+            <ArchitectureCard
+              title="Long-term stability"
+              items={[
+                'Designed for continuous outdoor rooftop operation',
+                'Stable performance across seasons and temperature variations',
+                'Architecture optimized for long service life'
+              ]}
+              imageSrc="/10.png"
+              index={2}
+            />
           </div>
         </div>
       </section>
