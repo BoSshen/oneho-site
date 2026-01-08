@@ -143,7 +143,7 @@ export default function RooftopSolutionPage() {
       </section>
 
       <section className="py-0 bg-black">
-        <div className="w-full h-[50vh] md:h-[60vh] overflow-hidden">
+        <div className="w-full h-[40vh] md:h-[50vh] overflow-hidden">
           <img
             src="/7.png"
             alt="Secure data communication"
