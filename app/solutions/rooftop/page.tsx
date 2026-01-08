@@ -204,7 +204,7 @@ export default function RooftopSolutionPage() {
             RELIABILITY
           </div>
 
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-20">
             <h2 className="text-4xl md:text-5xl font-light text-white mb-8 tracking-tight">
               Engineered for long-term rooftop operation
             </h2>
@@ -213,25 +213,25 @@ export default function RooftopSolutionPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-            <div className="border-l border-neutral-800 pl-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16">
+            <div className="border-l border-neutral-800/50 pl-6 pt-2">
               <div className="text-2xl md:text-3xl text-white font-light mb-3">Long system lifetime</div>
-              <p className="text-neutral-400 font-light text-sm">System architecture designed for long-term operation in rooftop environments</p>
+              <p className="text-neutral-400 font-light text-sm leading-relaxed">System architecture designed for long-term operation in rooftop environments</p>
             </div>
 
-            <div className="border-l border-neutral-800 pl-6">
+            <div className="border-l border-neutral-800/65 pl-6 pt-2">
               <div className="text-2xl md:text-3xl text-white font-light mb-3">Weather-resistant design</div>
-              <p className="text-neutral-400 font-light text-sm">Outdoor-rated enclosures suitable for long-term exposure to sun, rain, and temperature variation</p>
+              <p className="text-neutral-400 font-light text-sm leading-relaxed">Outdoor-rated enclosures suitable for long-term exposure to sun, rain, and temperature variation</p>
             </div>
 
-            <div className="border-l border-neutral-800 pl-6">
+            <div className="border-l border-neutral-800/80 pl-6 pt-2">
               <div className="text-2xl md:text-3xl text-white font-light mb-3">Stable operation</div>
-              <p className="text-neutral-400 font-light text-sm">Consistent system behavior across seasonal and environmental changes</p>
+              <p className="text-neutral-400 font-light text-sm leading-relaxed">Consistent system behavior across seasonal and environmental changes</p>
             </div>
 
-            <div className="border-l border-neutral-800 pl-6">
+            <div className="border-l border-neutral-800 pl-6 pt-2">
               <div className="text-2xl md:text-3xl text-white font-light mb-3">Field-proven architecture</div>
-              <p className="text-neutral-400 font-light text-sm">Validated through real residential and commercial rooftop deployments</p>
+              <p className="text-neutral-400 font-light text-sm leading-relaxed">Validated through real residential and commercial rooftop deployments</p>
             </div>
           </div>
         </div>
