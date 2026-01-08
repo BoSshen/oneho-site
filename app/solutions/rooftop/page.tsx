@@ -142,12 +142,12 @@ export default function RooftopSolutionPage() {
         </div>
       </section>
 
-      <section className="py-0 bg-black">
-        <div className="w-full">
+      <section className="py-20 md:py-32 bg-black">
+        <div className="max-w-5xl mx-auto px-6">
           <img
             src="/7.png"
             alt="Secure data communication"
-            className="w-full h-auto"
+            className="w-full h-auto rounded-lg"
           />
         </div>
       </section>
