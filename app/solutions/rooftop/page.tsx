@@ -11,12 +11,12 @@ export default function RooftopSolutionPage() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-40"
+          className="absolute inset-0 w-full h-full object-cover opacity-70"
         >
           <source src="/屋顶solution.mp4" type="video/mp4" />
         </video>
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/70" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <div className="text-xs tracking-[0.3em] text-neutral-400 mb-8 uppercase font-light">
