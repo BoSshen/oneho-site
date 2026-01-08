@@ -137,6 +137,13 @@ export default function RooftopSolutionPage() {
               <p className="text-neutral-400 font-light leading-relaxed">
                 Encrypted data transmission ensures safe communication between devices and cloud platforms.
               </p>
+              <div className="mt-8 max-w-xs">
+                <img
+                  src="/7.png"
+                  alt="Secure data communication"
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
             </div>
           </div>
         </div>
