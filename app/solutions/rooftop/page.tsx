@@ -172,7 +172,7 @@ export default function RooftopSolutionPage() {
             </div>
 
             <div>
-              <h3 className="text-2xl text-white font-light mb-6">Lightweight & scalable architecture</h3>
+              <h3 className="text-2xl text-white font-light mb-6">Lightweight & scalable</h3>
               <ul className="space-y-4 text-neutral-400 font-light">
                 <li className="flex items-start">
                   <span className="mr-3 text-neutral-600">—</span>
