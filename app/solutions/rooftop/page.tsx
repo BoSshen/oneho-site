@@ -18,11 +18,11 @@ export default function RooftopSolutionPage() {
           </h1>
 
           <p className="text-xl md:text-2xl text-neutral-300 font-light mb-6 max-w-3xl mx-auto">
-            A high-performance rooftop solar solution designed for maximum energy yield and long-term reliability.
+            A complete rooftop solar solution designed for residential and small commercial rooftops.
           </p>
 
           <p className="text-sm md:text-base text-neutral-400 font-light mb-12 max-w-2xl mx-auto">
-            A system-level architecture combining rooftop PV modules, microinverter-based conversion, and intelligent monitoring to maximize rooftop solar performance.
+            A system-level architecture combining rooftop PV modules, distributed conversion, and intelligent monitoring — engineered for real-world rooftop conditions.
           </p>
 
           <Button
@@ -53,30 +53,30 @@ export default function RooftopSolutionPage() {
 
             <div className="space-y-12">
               <div>
-                <h3 className="text-xl text-white font-light mb-3">Peak efficiency up to 98%</h3>
+                <h3 className="text-xl text-white font-light mb-3">Module-level optimization</h3>
                 <p className="text-neutral-400 font-light leading-relaxed">
-                  High-efficiency energy conversion designed for rooftop PV systems.
+                  Each module operates independently, reducing energy loss caused by shading, orientation differences, and uneven rooftop layouts.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl text-white font-light mb-3">Total energy yield increased by 5%–30%</h3>
+                <h3 className="text-xl text-white font-light mb-3">Distributed AC architecture</h3>
                 <p className="text-neutral-400 font-light leading-relaxed">
-                  Module-level optimization improves overall system output under real rooftop conditions.
+                  Power conversion occurs directly at the module level, simplifying system design and improving adaptability to complex rooftop environments.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl text-white font-light mb-3">No derating at 65°C</h3>
+                <h3 className="text-xl text-white font-light mb-3">Integrated system monitoring</h3>
                 <p className="text-neutral-400 font-light leading-relaxed">
-                  Stable operation maintained even under high rooftop temperatures.
+                  Built-in visibility enables both installers and system owners to understand system status and performance from day one.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl text-white font-light mb-3">Low-light power generation</h3>
+                <h3 className="text-xl text-white font-light mb-3">Rooftop-oriented design</h3>
                 <p className="text-neutral-400 font-light leading-relaxed">
-                  Enables earlier start and later stop, extending daily generation time by up to 3 hours.
+                  The system is designed to operate reliably across varying rooftop geometries, materials, and installation conditions.
                 </p>
               </div>
             </div>
@@ -95,35 +95,35 @@ export default function RooftopSolutionPage() {
           </h2>
 
           <p className="text-xl text-neutral-400 font-light mb-20 max-w-3xl mx-auto">
-            Rooftop safety is ensured through low-voltage design, continuous monitoring, and intelligent protection mechanisms.
+            Rooftop safety is ensured through low-voltage system design, continuous monitoring, and intelligent protection mechanisms.
           </p>
 
           <div className="max-w-2xl mx-auto space-y-12 text-left">
             <div>
-              <h3 className="text-xl text-white font-light mb-3">≤60V low-voltage DC design</h3>
+              <h3 className="text-xl text-white font-light mb-3">Low-voltage module-level design</h3>
               <p className="text-neutral-400 font-light leading-relaxed">
-                Reduces high-voltage risk at the module level.
+                Reduces electrical risk at the source by limiting DC voltage at the module level.
               </p>
             </div>
 
             <div>
               <h3 className="text-xl text-white font-light mb-3">Rapid shutdown capability</h3>
               <p className="text-neutral-400 font-light leading-relaxed">
-                Meets rooftop fire and emergency safety requirements.
+                Enables fast system shutdown to support rooftop fire safety and emergency response requirements.
               </p>
             </div>
 
             <div>
-              <h3 className="text-xl text-white font-light mb-3">24/7 module-level monitoring</h3>
+              <h3 className="text-xl text-white font-light mb-3">Continuous system monitoring</h3>
               <p className="text-neutral-400 font-light leading-relaxed">
-                Real-time detection of abnormal behavior.
+                Abnormal behavior can be detected in real time, improving operational awareness and system protection.
               </p>
             </div>
 
             <div>
-              <h3 className="text-xl text-white font-light mb-3">Encrypted data communication</h3>
+              <h3 className="text-xl text-white font-light mb-3">Secure data communication</h3>
               <p className="text-neutral-400 font-light leading-relaxed">
-                Secure transmission between devices and cloud platforms.
+                Encrypted data transmission ensures safe communication between devices and cloud platforms.
               </p>
             </div>
           </div>
@@ -146,29 +146,29 @@ export default function RooftopSolutionPage() {
               <ul className="space-y-4 text-neutral-400 font-light">
                 <li className="flex items-start">
                   <span className="mr-3 text-neutral-600">—</span>
-                  <span>98% peak conversion efficiency</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 text-neutral-600">—</span>
                   <span>Module-level energy optimization</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-3 text-neutral-600">—</span>
-                  <span>Improved yield under shading and uneven conditions</span>
+                  <span>Reduced mismatch losses across the array</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-neutral-600">—</span>
+                  <span>Improved output consistency under partial shading and uneven conditions</span>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-2xl text-white font-light mb-6">Lightweight & scalable</h3>
+              <h3 className="text-2xl text-white font-light mb-6">Lightweight & scalable architecture</h3>
               <ul className="space-y-4 text-neutral-400 font-light">
                 <li className="flex items-start">
                   <span className="mr-3 text-neutral-600">—</span>
-                  <span>Ultra-lightweight unit: 1.48 kg</span>
+                  <span>Distributed system layout with no single point of failure</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-3 text-neutral-600">—</span>
-                  <span>Modular system design</span>
+                  <span>Modular design allows flexible system sizing</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-3 text-neutral-600">—</span>
@@ -182,15 +182,15 @@ export default function RooftopSolutionPage() {
               <ul className="space-y-4 text-neutral-400 font-light">
                 <li className="flex items-start">
                   <span className="mr-3 text-neutral-600">—</span>
-                  <span>Designed for outdoor rooftop environments</span>
+                  <span>Designed for continuous outdoor rooftop operation</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-3 text-neutral-600">—</span>
-                  <span>Stable performance across seasons</span>
+                  <span>Stable performance across seasons and temperature variations</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-3 text-neutral-600">—</span>
-                  <span>Low failure rate ensures continuous operation</span>
+                  <span>Architecture optimized for long service life</span>
                 </li>
               </ul>
             </div>
@@ -215,23 +215,23 @@ export default function RooftopSolutionPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             <div className="border-l border-neutral-800 pl-6">
-              <div className="text-2xl md:text-3xl text-white font-light mb-3">IP67 protection</div>
-              <p className="text-neutral-400 font-light text-sm">Weather-resistant enclosure for harsh environments</p>
+              <div className="text-2xl md:text-3xl text-white font-light mb-3">Long system lifetime</div>
+              <p className="text-neutral-400 font-light text-sm">System architecture designed for long-term operation in rooftop environments</p>
             </div>
 
             <div className="border-l border-neutral-800 pl-6">
-              <div className="text-2xl md:text-3xl text-white font-light mb-3">25-year warranty</div>
-              <p className="text-neutral-400 font-light text-sm">Long-term system reliability assurance</p>
+              <div className="text-2xl md:text-3xl text-white font-light mb-3">Weather-resistant design</div>
+              <p className="text-neutral-400 font-light text-sm">Outdoor-rated enclosures suitable for long-term exposure to sun, rain, and temperature variation</p>
             </div>
 
             <div className="border-l border-neutral-800 pl-6">
-              <div className="text-2xl md:text-3xl text-white font-light mb-3">≤500 ppm failure rate</div>
-              <p className="text-neutral-400 font-light text-sm">High manufacturing quality and reliability</p>
+              <div className="text-2xl md:text-3xl text-white font-light mb-3">Stable operation</div>
+              <p className="text-neutral-400 font-light text-sm">Consistent system behavior across seasonal and environmental changes</p>
             </div>
 
             <div className="border-l border-neutral-800 pl-6">
-              <div className="text-2xl md:text-3xl text-white font-light mb-3">Stable long-term output</div>
-              <p className="text-neutral-400 font-light text-sm">Consistent performance across temperature extremes</p>
+              <div className="text-2xl md:text-3xl text-white font-light mb-3">Field-proven architecture</div>
+              <p className="text-neutral-400 font-light text-sm">Validated through real residential and commercial rooftop deployments</p>
             </div>
           </div>
         </div>
@@ -244,58 +244,42 @@ export default function RooftopSolutionPage() {
           </div>
 
           <h2 className="text-4xl md:text-5xl font-light text-white mb-20 tracking-tight max-w-3xl">
-            Smart monitoring and intelligent control
+            Operational visibility built into the solution
           </h2>
 
           <div className="grid md:grid-cols-2 gap-16 lg:gap-24">
             <div>
-              <h3 className="text-2xl text-white font-light mb-8">Connectivity & communication</h3>
+              <h3 className="text-2xl text-white font-light mb-8">Installer View</h3>
               <ul className="space-y-6 text-neutral-400 font-light">
                 <li className="flex items-start">
                   <span className="mr-3 text-neutral-600">—</span>
-                  <span>PLC communication technology</span>
+                  <span>Remote system commissioning support</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-3 text-neutral-600">—</span>
-                  <span>Long-distance signal transmission</span>
+                  <span>Ongoing system health monitoring</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-3 text-neutral-600">—</span>
-                  <span>Strong anti-interference capability</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 text-neutral-600">—</span>
-                  <span>Independent module communication</span>
+                  <span>Performance diagnostics and issue identification</span>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-2xl text-white font-light mb-8">Intelligent operation & maintenance</h3>
+              <h3 className="text-2xl text-white font-light mb-8">End User View</h3>
               <ul className="space-y-6 text-neutral-400 font-light">
                 <li className="flex items-start">
                   <span className="mr-3 text-neutral-600">—</span>
-                  <span>Smart zero-export (power limiting) control</span>
+                  <span>Simple mobile access</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-3 text-neutral-600">—</span>
-                  <span>Module-level real-time monitoring</span>
+                  <span>Real-time energy generation visibility</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-3 text-neutral-600">—</span>
-                  <span>Remote commissioning and configuration</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 text-neutral-600">—</span>
-                  <span>Remote firmware upgrade</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 text-neutral-600">—</span>
-                  <span>AI-assisted fault diagnosis</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 text-neutral-600">—</span>
-                  <span>Faster issue response and reduced O&M cost</span>
+                  <span>Long-term energy savings tracking</span>
                 </li>
               </ul>
             </div>
