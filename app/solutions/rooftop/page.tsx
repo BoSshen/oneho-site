@@ -57,7 +57,7 @@ export default function RooftopSolutionPage() {
           <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-start">
             <div className="relative aspect-square bg-neutral-900 rounded-lg overflow-hidden">
               <img
-                src="/5.jpg"
+                src="/6.png"
                 alt="Rooftop PV System"
                 className="w-full h-full object-cover"
               />
