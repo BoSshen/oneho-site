@@ -198,13 +198,15 @@ export default function RooftopSolutionPage() {
         </div>
       </section>
 
-      <section className="py-32 md:py-40 bg-black">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="relative py-32 md:py-40 bg-black overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/98 to-black pointer-events-none z-10"></div>
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-20">
           <div className="text-xs tracking-[0.25em] text-neutral-500 mb-6 uppercase font-light">
             RELIABILITY
           </div>
 
-          <div className="max-w-3xl mb-24">
+          <div className="max-w-3xl mb-20">
             <h2 className="text-4xl md:text-5xl font-light text-white mb-8 tracking-tight">
               Engineered for long-term rooftop operation
             </h2>
@@ -213,81 +215,110 @@ export default function RooftopSolutionPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-20">
-            <div className="border-l-2 border-white/[0.15] pl-8">
-              <div className="text-2xl md:text-3xl text-white font-light mb-4">Long system lifetime</div>
-              <p className="text-neutral-400 font-light text-sm leading-relaxed mb-8">System architecture designed for long-term operation in rooftop environments</p>
-              <div className="space-y-4">
-                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
-                  <span className="text-xs text-neutral-500 uppercase tracking-wider">Design lifetime</span>
-                  <span className="text-sm text-neutral-300 font-light">25+ years</span>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-10">
+              <div className="group cursor-default">
+                <div className="flex items-start gap-6">
+                  <div className="w-2 h-2 rounded-full bg-white/40 mt-3 group-hover:bg-white group-hover:shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-all duration-500"></div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl md:text-3xl text-white font-light mb-3 group-hover:text-white/90 transition-colors">
+                      Long system lifetime
+                    </h3>
+                    <p className="text-neutral-400 font-light leading-relaxed">
+                      System architecture designed for long-term operation in rooftop environments
+                    </p>
+                  </div>
                 </div>
-                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
-                  <span className="text-xs text-neutral-500 uppercase tracking-wider">Component rating</span>
-                  <span className="text-sm text-neutral-300 font-light">Industrial grade</span>
+              </div>
+
+              <div className="group cursor-default">
+                <div className="flex items-start gap-6">
+                  <div className="w-2 h-2 rounded-full bg-white/40 mt-3 group-hover:bg-white group-hover:shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-all duration-500"></div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl md:text-3xl text-white font-light mb-3 group-hover:text-white/90 transition-colors">
+                      Weather-resistant design
+                    </h3>
+                    <p className="text-neutral-400 font-light leading-relaxed">
+                      Outdoor-rated enclosures suitable for long-term exposure to sun, rain, and temperature variation
+                    </p>
+                  </div>
                 </div>
-                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
-                  <span className="text-xs text-neutral-500 uppercase tracking-wider">Maintenance cycle</span>
-                  <span className="text-sm text-neutral-300 font-light">Low frequency</span>
+              </div>
+
+              <div className="group cursor-default">
+                <div className="flex items-start gap-6">
+                  <div className="w-2 h-2 rounded-full bg-white/40 mt-3 group-hover:bg-white group-hover:shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-all duration-500"></div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl md:text-3xl text-white font-light mb-3 group-hover:text-white/90 transition-colors">
+                      Stable operation
+                    </h3>
+                    <p className="text-neutral-400 font-light leading-relaxed">
+                      Consistent system behavior across seasonal and environmental changes
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="group cursor-default">
+                <div className="flex items-start gap-6">
+                  <div className="w-2 h-2 rounded-full bg-white/40 mt-3 group-hover:bg-white group-hover:shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-all duration-500"></div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl md:text-3xl text-white font-light mb-3 group-hover:text-white/90 transition-colors">
+                      Field-proven architecture
+                    </h3>
+                    <p className="text-neutral-400 font-light leading-relaxed">
+                      Validated through real residential and commercial rooftop deployments
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="border-l-2 border-white/[0.15] pl-8">
-              <div className="text-2xl md:text-3xl text-white font-light mb-4">Weather-resistant design</div>
-              <p className="text-neutral-400 font-light text-sm leading-relaxed mb-8">Outdoor-rated enclosures suitable for long-term exposure to sun, rain, and temperature variation</p>
-              <div className="space-y-4">
-                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
-                  <span className="text-xs text-neutral-500 uppercase tracking-wider">IP rating</span>
-                  <span className="text-sm text-neutral-300 font-light">IP65+</span>
+            <div className="relative lg:h-[650px] h-[500px]">
+              <div className="absolute inset-0 grid grid-cols-2 gap-4">
+                <div className="space-y-4">
+                  <div className="relative h-[280px] lg:h-[400px] rounded-2xl overflow-hidden group cursor-pointer">
+                    <img
+                      src="/7.png"
+                      alt="Commercial rooftop installation"
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 ring-1 ring-white/0 group-hover:ring-white/20 transition-all duration-500 rounded-2xl"></div>
+                  </div>
+                  <div className="relative h-[120px] lg:h-[220px] rounded-2xl overflow-hidden group cursor-pointer">
+                    <img
+                      src="/8.png"
+                      alt="Aerial view"
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 ring-1 ring-white/0 group-hover:ring-white/20 transition-all duration-500 rounded-2xl"></div>
+                  </div>
                 </div>
-                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
-                  <span className="text-xs text-neutral-500 uppercase tracking-wider">Operating temp.</span>
-                  <span className="text-sm text-neutral-300 font-light">-40°C to +60°C</span>
-                </div>
-                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
-                  <span className="text-xs text-neutral-500 uppercase tracking-wider">UV resistance</span>
-                  <span className="text-sm text-neutral-300 font-light">Long-term rated</span>
+                <div className="space-y-4 pt-16">
+                  <div className="relative h-[120px] lg:h-[220px] rounded-2xl overflow-hidden group cursor-pointer">
+                    <img
+                      src="/6.png"
+                      alt="Residential installation"
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 ring-1 ring-white/0 group-hover:ring-white/20 transition-all duration-500 rounded-2xl"></div>
+                  </div>
+                  <div className="relative h-[280px] lg:h-[400px] rounded-2xl overflow-hidden group cursor-pointer">
+                    <img
+                      src="/9.png"
+                      alt="Sunset panels"
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 ring-1 ring-white/0 group-hover:ring-white/20 transition-all duration-500 rounded-2xl"></div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="border-l-2 border-white/[0.15] pl-8">
-              <div className="text-2xl md:text-3xl text-white font-light mb-4">Stable operation</div>
-              <p className="text-neutral-400 font-light text-sm leading-relaxed mb-8">Consistent system behavior across seasonal and environmental changes</p>
-              <div className="space-y-4">
-                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
-                  <span className="text-xs text-neutral-500 uppercase tracking-wider">Performance drift</span>
-                  <span className="text-sm text-neutral-300 font-light">&lt;2% annually</span>
-                </div>
-                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
-                  <span className="text-xs text-neutral-500 uppercase tracking-wider">Thermal management</span>
-                  <span className="text-sm text-neutral-300 font-light">Active cooling</span>
-                </div>
-                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
-                  <span className="text-xs text-neutral-500 uppercase tracking-wider">Grid compliance</span>
-                  <span className="text-sm text-neutral-300 font-light">Multi-standard</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="border-l-2 border-white/[0.15] pl-8">
-              <div className="text-2xl md:text-3xl text-white font-light mb-4">Field-proven architecture</div>
-              <p className="text-neutral-400 font-light text-sm leading-relaxed mb-8">Validated through real residential and commercial rooftop deployments</p>
-              <div className="space-y-4">
-                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
-                  <span className="text-xs text-neutral-500 uppercase tracking-wider">Installations</span>
-                  <span className="text-sm text-neutral-300 font-light">10,000+ systems</span>
-                </div>
-                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
-                  <span className="text-xs text-neutral-500 uppercase tracking-wider">Operating time</span>
-                  <span className="text-sm text-neutral-300 font-light">50M+ hours</span>
-                </div>
-                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
-                  <span className="text-xs text-neutral-500 uppercase tracking-wider">Deployment regions</span>
-                  <span className="text-sm text-neutral-300 font-light">Global</span>
-                </div>
-              </div>
+              <div className="absolute -inset-8 bg-gradient-to-r from-white/[0.07] via-white/0 to-white/[0.07] blur-3xl opacity-60 pointer-events-none animate-pulse"></div>
             </div>
           </div>
         </div>
