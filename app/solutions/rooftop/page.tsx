@@ -213,28 +213,24 @@ export default function RooftopSolutionPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            <div className="bg-neutral-950 px-6 py-8">
-              <div className="text-2xl md:text-3xl text-white font-light mb-2">Long system lifetime</div>
-              <div className="w-px h-6 bg-white/10 mb-6"></div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-y-16 gap-x-6 lg:gap-x-10">
+            <div className="border-l-2 border-white/[0.15] pl-6">
+              <div className="text-2xl md:text-3xl text-white font-light mb-4">Long system lifetime</div>
               <p className="text-neutral-400 font-light text-sm leading-relaxed">System architecture designed for long-term operation in rooftop environments</p>
             </div>
 
-            <div className="bg-neutral-950 px-6 py-8">
-              <div className="text-2xl md:text-3xl text-white font-light mb-2">Weather-resistant design</div>
-              <div className="w-px h-6 bg-white/10 mb-6"></div>
+            <div className="border-l-2 border-white/[0.15] pl-6">
+              <div className="text-2xl md:text-3xl text-white font-light mb-4">Weather-resistant design</div>
               <p className="text-neutral-400 font-light text-sm leading-relaxed">Outdoor-rated enclosures suitable for long-term exposure to sun, rain, and temperature variation</p>
             </div>
 
-            <div className="bg-neutral-950 px-6 py-8">
-              <div className="text-2xl md:text-3xl text-white font-light mb-2">Stable operation</div>
-              <div className="w-px h-6 bg-white/10 mb-6"></div>
+            <div className="border-l-2 border-white/[0.15] pl-6">
+              <div className="text-2xl md:text-3xl text-white font-light mb-4">Stable operation</div>
               <p className="text-neutral-400 font-light text-sm leading-relaxed">Consistent system behavior across seasonal and environmental changes</p>
             </div>
 
-            <div className="bg-neutral-950 px-6 py-8">
-              <div className="text-2xl md:text-3xl text-white font-light mb-2">Field-proven architecture</div>
-              <div className="w-px h-6 bg-white/10 mb-6"></div>
+            <div className="border-l-2 border-white/[0.15] pl-6">
+              <div className="text-2xl md:text-3xl text-white font-light mb-4">Field-proven architecture</div>
               <p className="text-neutral-400 font-light text-sm leading-relaxed">Validated through real residential and commercial rooftop deployments</p>
             </div>
           </div>
