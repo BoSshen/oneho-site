@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import Header from '@/components/Header';
 import ProductCard from '@/components/ProductCard';
+import ProductShowcase from '@/components/ProductShowcase';
 import { woocommerce, WooCommerceProduct } from '@/lib/woocommerce';
 
 export default async function Home() {
@@ -66,6 +67,8 @@ export default async function Home() {
             </div>
           </div>
         </section>
+
+        <ProductShowcase />
 
         <section className="relative min-h-screen overflow-hidden flex items-center justify-start">
           <Image
