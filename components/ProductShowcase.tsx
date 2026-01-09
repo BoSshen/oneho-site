@@ -31,15 +31,6 @@ const products: Product[] = [
     powerLabel: 'maximum power',
     image: '/12.png',
     link: '/shop'
-  },
-  {
-    id: 3,
-    name: 'Power Hub',
-    tagline: 'Grid-scale conversion',
-    power: '2000W',
-    powerLabel: 'maximum power',
-    image: '/13.png',
-    link: '/shop'
   }
 ];
 
