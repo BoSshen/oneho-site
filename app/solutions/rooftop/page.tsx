@@ -213,25 +213,81 @@ export default function RooftopSolutionPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-y-16 gap-x-6 lg:gap-x-10">
-            <div className="border-l-2 border-white/[0.15] pl-6">
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-20">
+            <div className="border-l-2 border-white/[0.15] pl-8">
               <div className="text-2xl md:text-3xl text-white font-light mb-4">Long system lifetime</div>
-              <p className="text-neutral-400 font-light text-sm leading-relaxed">System architecture designed for long-term operation in rooftop environments</p>
+              <p className="text-neutral-400 font-light text-sm leading-relaxed mb-8">System architecture designed for long-term operation in rooftop environments</p>
+              <div className="space-y-4">
+                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
+                  <span className="text-xs text-neutral-500 uppercase tracking-wider">Design lifetime</span>
+                  <span className="text-sm text-neutral-300 font-light">25+ years</span>
+                </div>
+                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
+                  <span className="text-xs text-neutral-500 uppercase tracking-wider">Component rating</span>
+                  <span className="text-sm text-neutral-300 font-light">Industrial grade</span>
+                </div>
+                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
+                  <span className="text-xs text-neutral-500 uppercase tracking-wider">Maintenance cycle</span>
+                  <span className="text-sm text-neutral-300 font-light">Low frequency</span>
+                </div>
+              </div>
             </div>
 
-            <div className="border-l-2 border-white/[0.15] pl-6">
+            <div className="border-l-2 border-white/[0.15] pl-8">
               <div className="text-2xl md:text-3xl text-white font-light mb-4">Weather-resistant design</div>
-              <p className="text-neutral-400 font-light text-sm leading-relaxed">Outdoor-rated enclosures suitable for long-term exposure to sun, rain, and temperature variation</p>
+              <p className="text-neutral-400 font-light text-sm leading-relaxed mb-8">Outdoor-rated enclosures suitable for long-term exposure to sun, rain, and temperature variation</p>
+              <div className="space-y-4">
+                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
+                  <span className="text-xs text-neutral-500 uppercase tracking-wider">IP rating</span>
+                  <span className="text-sm text-neutral-300 font-light">IP65+</span>
+                </div>
+                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
+                  <span className="text-xs text-neutral-500 uppercase tracking-wider">Operating temp.</span>
+                  <span className="text-sm text-neutral-300 font-light">-40°C to +60°C</span>
+                </div>
+                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
+                  <span className="text-xs text-neutral-500 uppercase tracking-wider">UV resistance</span>
+                  <span className="text-sm text-neutral-300 font-light">Long-term rated</span>
+                </div>
+              </div>
             </div>
 
-            <div className="border-l-2 border-white/[0.15] pl-6">
+            <div className="border-l-2 border-white/[0.15] pl-8">
               <div className="text-2xl md:text-3xl text-white font-light mb-4">Stable operation</div>
-              <p className="text-neutral-400 font-light text-sm leading-relaxed">Consistent system behavior across seasonal and environmental changes</p>
+              <p className="text-neutral-400 font-light text-sm leading-relaxed mb-8">Consistent system behavior across seasonal and environmental changes</p>
+              <div className="space-y-4">
+                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
+                  <span className="text-xs text-neutral-500 uppercase tracking-wider">Performance drift</span>
+                  <span className="text-sm text-neutral-300 font-light">&lt;2% annually</span>
+                </div>
+                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
+                  <span className="text-xs text-neutral-500 uppercase tracking-wider">Thermal management</span>
+                  <span className="text-sm text-neutral-300 font-light">Active cooling</span>
+                </div>
+                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
+                  <span className="text-xs text-neutral-500 uppercase tracking-wider">Grid compliance</span>
+                  <span className="text-sm text-neutral-300 font-light">Multi-standard</span>
+                </div>
+              </div>
             </div>
 
-            <div className="border-l-2 border-white/[0.15] pl-6">
+            <div className="border-l-2 border-white/[0.15] pl-8">
               <div className="text-2xl md:text-3xl text-white font-light mb-4">Field-proven architecture</div>
-              <p className="text-neutral-400 font-light text-sm leading-relaxed">Validated through real residential and commercial rooftop deployments</p>
+              <p className="text-neutral-400 font-light text-sm leading-relaxed mb-8">Validated through real residential and commercial rooftop deployments</p>
+              <div className="space-y-4">
+                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
+                  <span className="text-xs text-neutral-500 uppercase tracking-wider">Installations</span>
+                  <span className="text-sm text-neutral-300 font-light">10,000+ systems</span>
+                </div>
+                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
+                  <span className="text-xs text-neutral-500 uppercase tracking-wider">Operating time</span>
+                  <span className="text-sm text-neutral-300 font-light">50M+ hours</span>
+                </div>
+                <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
+                  <span className="text-xs text-neutral-500 uppercase tracking-wider">Deployment regions</span>
+                  <span className="text-sm text-neutral-300 font-light">Global</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
