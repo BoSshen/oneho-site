@@ -72,8 +72,11 @@ export default function ProductShowcase() {
 
       setScrollProgress(progress);
 
-      const newIndex = Math.min(Math.floor(progress * products.length * 1.2), products.length - 1);
-      setCurrentIndex(Math.max(0, newIndex));
+      const newIndex = Math.min(
+        Math.max(0, Math.floor(progress * products.length * 1.2)),
+        products.length - 1
+      );
+      setCurrentIndex(newIndex);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -84,6 +87,8 @@ export default function ProductShowcase() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const currentProduct = products[currentIndex] || products[0];
 
   return (
     <section ref={sectionRef} className="relative bg-white" style={{ height: '300vh' }}>
@@ -103,22 +108,22 @@ export default function ProductShowcase() {
                 </div>
 
                 <h2 className="text-5xl md:text-7xl lg:text-8xl font-extralight tracking-tight text-neutral-900 mb-8 leading-[0.95]">
-                  {products[currentIndex].name}
+                  {currentProduct.name}
                 </h2>
 
                 <p className="text-xl md:text-2xl text-neutral-500 font-light mb-12 leading-relaxed">
-                  {products[currentIndex].tagline}
+                  {currentProduct.tagline}
                 </p>
 
                 <div className="flex items-baseline gap-3 mb-12">
                   <span className="text-6xl md:text-7xl font-extralight text-neutral-900">
-                    {products[currentIndex].power}
+                    {currentProduct.power}
                   </span>
                   <span className="text-2xl text-neutral-400 font-light">peak output</span>
                 </div>
 
                 <Link
-                  href={products[currentIndex].link}
+                  href={currentProduct.link}
                   className="inline-flex items-center text-sm tracking-[0.1em] text-neutral-900 font-medium group"
                 >
                   <span className="border-b border-neutral-900 pb-1">LEARN MORE</span>
