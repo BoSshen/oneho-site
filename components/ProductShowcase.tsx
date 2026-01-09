@@ -41,9 +41,10 @@ const products: Product[] = [
 
 export default function ProductShowcase() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [scrollProgress, setScrollProgress] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const rafRef = useRef<number>();
+  const lastIndexRef = useRef(0);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -62,29 +63,48 @@ export default function ProductShowcase() {
 
     observer.observe(section);
 
+    let ticking = false;
+
     const handleScroll = () => {
-      if (!section) return;
+      if (!ticking) {
+        if (rafRef.current) {
+          cancelAnimationFrame(rafRef.current);
+        }
 
-      const rect = section.getBoundingClientRect();
-      const sectionHeight = rect.height;
-      const scrolled = -rect.top;
-      const progress = Math.max(0, Math.min(1, scrolled / (sectionHeight - window.innerHeight)));
+        rafRef.current = requestAnimationFrame(() => {
+          if (!section) return;
 
-      setScrollProgress(progress);
+          const rect = section.getBoundingClientRect();
+          const sectionHeight = rect.height;
+          const scrolled = -rect.top;
+          const progress = Math.max(0, Math.min(1, scrolled / (sectionHeight - window.innerHeight)));
 
-      const newIndex = Math.min(
-        Math.max(0, Math.floor(progress * products.length * 1.2)),
-        products.length - 1
-      );
-      setCurrentIndex(newIndex);
+          const newIndex = Math.min(
+            Math.max(0, Math.floor(progress * products.length * 1.1)),
+            products.length - 1
+          );
+
+          if (newIndex !== lastIndexRef.current) {
+            lastIndexRef.current = newIndex;
+            setCurrentIndex(newIndex);
+          }
+
+          ticking = false;
+        });
+
+        ticking = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
 
     return () => {
       observer.disconnect();
       window.removeEventListener('scroll', handleScroll);
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+      }
     };
   }, []);
 
@@ -104,7 +124,7 @@ export default function ProductShowcase() {
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div className="order-2 lg:order-1 space-y-10">
               <div
-                className={`transition-all duration-1000 ${
+                className={`transition-all duration-1000 transform-gpu ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}
               >
@@ -112,26 +132,65 @@ export default function ProductShowcase() {
                   Product Excellence
                 </div>
 
-                <h2 className="text-5xl md:text-7xl lg:text-8xl font-extralight tracking-tighter text-white mb-10 leading-[0.9]">
-                  {currentProduct.name}
-                </h2>
+                <div className="relative overflow-hidden" style={{ minHeight: '180px' }}>
+                  {products.map((product, index) => (
+                    <h2
+                      key={product.id}
+                      className={`text-5xl md:text-7xl lg:text-8xl font-extralight tracking-tighter text-white mb-10 leading-[0.9] transition-all duration-500 absolute top-0 left-0 will-change-transform ${
+                        index === currentIndex
+                          ? 'opacity-100 translate-x-0'
+                          : index < currentIndex
+                          ? 'opacity-0 -translate-x-8'
+                          : 'opacity-0 translate-x-8'
+                      }`}
+                    >
+                      {product.name}
+                    </h2>
+                  ))}
+                </div>
 
                 <div className="w-16 h-[1px] bg-gradient-to-r from-orange-400 to-transparent mb-10"></div>
 
-                <p className="text-xl md:text-2xl text-neutral-400 font-light mb-14 leading-relaxed tracking-wide">
-                  {currentProduct.tagline}
-                </p>
+                <div className="relative overflow-hidden" style={{ minHeight: '80px' }}>
+                  {products.map((product, index) => (
+                    <p
+                      key={product.id}
+                      className={`text-xl md:text-2xl text-neutral-400 font-light mb-14 leading-relaxed tracking-wide transition-all duration-500 absolute top-0 left-0 will-change-transform ${
+                        index === currentIndex
+                          ? 'opacity-100 translate-x-0'
+                          : index < currentIndex
+                          ? 'opacity-0 -translate-x-8'
+                          : 'opacity-0 translate-x-8'
+                      }`}
+                    >
+                      {product.tagline}
+                    </p>
+                  ))}
+                </div>
 
-                <div className="flex items-baseline gap-4 mb-16">
-                  <span className="text-7xl md:text-8xl font-thin text-white tracking-tighter">
-                    {currentProduct.power}
-                  </span>
-                  <span className="text-xl text-neutral-500 font-light tracking-wide">maximum power</span>
+                <div className="flex items-baseline gap-4 mb-16 relative overflow-hidden" style={{ minHeight: '120px' }}>
+                  {products.map((product, index) => (
+                    <div
+                      key={product.id}
+                      className={`transition-all duration-500 absolute top-0 left-0 flex items-baseline gap-4 will-change-transform ${
+                        index === currentIndex
+                          ? 'opacity-100 translate-x-0'
+                          : index < currentIndex
+                          ? 'opacity-0 -translate-x-8'
+                          : 'opacity-0 translate-x-8'
+                      }`}
+                    >
+                      <span className="text-7xl md:text-8xl font-thin text-white tracking-tighter">
+                        {product.power}
+                      </span>
+                      <span className="text-xl text-neutral-500 font-light tracking-wide">maximum power</span>
+                    </div>
+                  ))}
                 </div>
 
                 <Link
                   href={currentProduct.link}
-                  className="inline-flex items-center gap-4 px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-full text-xs tracking-[0.15em] text-white font-medium group transition-all duration-300 backdrop-blur-sm"
+                  className="inline-flex items-center gap-4 px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-full text-xs tracking-[0.15em] text-white font-medium group transition-all duration-300 backdrop-blur-sm transform-gpu"
                 >
                   <span>DISCOVER MORE</span>
                   <svg
@@ -149,7 +208,7 @@ export default function ProductShowcase() {
                 {products.map((_, index) => (
                   <div
                     key={index}
-                    className={`h-[2px] flex-1 rounded-full transition-all duration-700 ${
+                    className={`h-[2px] flex-1 rounded-full transition-all duration-500 ease-out transform-gpu ${
                       index === currentIndex
                         ? 'bg-gradient-to-r from-orange-400 to-orange-500 shadow-[0_0_20px_rgba(251,146,60,0.5)]'
                         : 'bg-white/10'
@@ -164,15 +223,18 @@ export default function ProductShowcase() {
                 {products.map((product, index) => (
                   <div
                     key={product.id}
-                    className={`absolute inset-0 transition-all duration-[1200ms] ease-out ${
+                    className={`absolute inset-0 transition-all duration-700 ease-in-out will-change-transform ${
                       index === currentIndex
-                        ? 'opacity-100 scale-100 rotate-0'
+                        ? 'opacity-100 scale-100 rotate-0 z-10'
                         : index < currentIndex
-                        ? 'opacity-0 scale-90 -rotate-12'
-                        : 'opacity-0 scale-110 rotate-12'
+                        ? 'opacity-0 scale-95 -rotate-6 z-0'
+                        : 'opacity-0 scale-105 rotate-6 z-0'
                     }`}
+                    style={{
+                      transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+                    }}
                   >
-                    <div className="relative w-full h-full">
+                    <div className="relative w-full h-full transform-gpu">
                       <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] via-transparent to-white/[0.03] rounded-[3rem] backdrop-blur-3xl border border-white/[0.05]"></div>
 
                       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(251,146,60,0.08),transparent_60%)]"></div>
@@ -182,7 +244,7 @@ export default function ProductShowcase() {
                         <img
                           src={product.image}
                           alt={product.name}
-                          className="relative w-full h-full object-contain"
+                          className="relative w-full h-full object-contain transform-gpu"
                           style={{
                             filter: 'drop-shadow(0 30px 60px rgba(0,0,0,0.4)) drop-shadow(0 10px 20px rgba(251,146,60,0.1))',
                           }}
