@@ -11,7 +11,6 @@ interface Product {
   powerLabel: string;
   image: string;
   link: string;
-  features?: { icon: string; text: string }[];
 }
 
 const products: Product[] = [
@@ -22,12 +21,7 @@ const products: Product[] = [
     power: '550VA',
     powerLabel: 'peak output',
     image: '/11.png',
-    link: '/shop',
-    features: [
-      { icon: '⚡', text: '12V Low Voltage Start' },
-      { icon: '🛡️', text: 'Built-in Relay' },
-      { icon: '⚖️', text: '1.48kg Ultra-Light' }
-    ]
+    link: '/shop'
   },
   {
     id: 2,
@@ -122,7 +116,7 @@ export default function ProductShowcase() {
 
   return (
     <section ref={sectionRef} className="relative bg-black" style={{ height: '300vh' }}>
-      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-neutral-950 to-black"></div>
 
         <div className="absolute inset-0">
@@ -178,7 +172,7 @@ export default function ProductShowcase() {
                   ))}
                 </div>
 
-                <div className="flex items-baseline gap-4 mb-12 relative overflow-hidden" style={{ minHeight: '120px' }}>
+                <div className="flex items-baseline gap-4 mb-16 relative overflow-hidden" style={{ minHeight: '120px' }}>
                   {products.map((product, index) => (
                     <div
                       key={product.id}
@@ -197,20 +191,6 @@ export default function ProductShowcase() {
                     </div>
                   ))}
                 </div>
-
-                {currentProduct.features && (
-                  <div className="grid grid-cols-1 gap-3 mb-12">
-                    {currentProduct.features.map((feature, idx) => (
-                      <div
-                        key={idx}
-                        className="flex items-center gap-3 px-4 py-3 bg-white/[0.02] border border-white/[0.08] rounded-2xl backdrop-blur-sm hover:bg-white/[0.04] hover:border-white/[0.12] transition-all duration-300"
-                      >
-                        <span className="text-2xl">{feature.icon}</span>
-                        <span className="text-sm text-neutral-300 font-light tracking-wide">{feature.text}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
 
                 <Link
                   href={currentProduct.link}
