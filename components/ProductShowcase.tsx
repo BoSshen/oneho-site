@@ -248,7 +248,7 @@ export default function ProductShowcase() {
 
                       <div className="absolute top-10 right-10 flex items-center gap-3 px-4 py-2 bg-emerald-500/10 border border-emerald-400/20 rounded-full backdrop-blur-sm">
                         <div className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.6)] animate-pulse"></div>
-                        <span className="text-[10px] tracking-wider text-emerald-400 font-medium">ACTIVE</span>
+                        <span className="text-[10px] tracking-wider text-emerald-400 font-medium">AVAILABLE</span>
                       </div>
 
                       <div className="absolute -inset-[1px] bg-gradient-to-br from-orange-500/10 via-transparent to-blue-500/10 rounded-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
